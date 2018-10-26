@@ -19,7 +19,7 @@ class SyliusSubscriptionBundle extends AbstractResourceBundle
     /**
      * {@inheritdoc}
      */
-    public function getSupportedDrivers()
+    public function getSupportedDrivers() : array
     {
         return array(
             SyliusResourceBundle::DRIVER_DOCTRINE_ORM
@@ -29,7 +29,7 @@ class SyliusSubscriptionBundle extends AbstractResourceBundle
     /**
      * {@inheritdoc}
      */
-    protected function getBundlePrefix()
+    protected function getBundlePrefix() : string
     {
         return 'sylius_subscription';
     }
@@ -37,7 +37,7 @@ class SyliusSubscriptionBundle extends AbstractResourceBundle
     /**
      * {@inheritdoc}
      */
-    protected function getModelInterfaces()
+    protected function getModelInterfaces() : array
     {
         return array(
             'Sylius\Component\Subscription\Model\SubscriptionInterface' => 'sylius.model.subscription.class',
@@ -47,7 +47,7 @@ class SyliusSubscriptionBundle extends AbstractResourceBundle
     /**
      * {@inheritdoc}
      */
-    protected function getModelNamespace()
+    protected function getModelNamespace() : ?string
     {
         return 'Sylius\Component\Subscription\Model';
     }
