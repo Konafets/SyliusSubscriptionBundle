@@ -32,7 +32,6 @@ class SyliusSubscriptionExtension extends AbstractResourceExtension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $this->registerResources('sylius', $config['driver'], $config['resources'], $container);
-        $this->mapFormValidationGroupsParameters($config, $container);
 
         $configFiles = [
             'services.xml',
